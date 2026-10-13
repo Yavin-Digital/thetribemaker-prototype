@@ -1,0 +1,32 @@
+/* F1 High menu styles (mirrors original Tailwind: absolute right-0 mt-2 w-56 bg-white border rounded-md shadow-lg p-2 z-50) */
+.ttm-mnav{position:absolute;right:0;top:100%;margin:8px 0 0;width:15rem;max-width:calc(100vw - 32px);max-height:calc(100svh - 80px);overflow:auto;background:#fff;border:1px solid var(--color-brand-line,#e5e5e5);border-radius:.375rem;box-shadow:0 10px 15px -3px rgba(0,0,0,.15);padding:.5rem;list-style:none;z-index:50}
+.ttm-mnav[hidden]{display:none}
+.ttm-mnav a{display:flex;align-items:center;min-height:48px;padding:0 .75rem;font-size:1rem;font-weight:500;color:var(--color-brand-ink,#131419);text-decoration:none;border-radius:.25rem}
+.ttm-mnav .cta a{justify-content:center;margin-top:.5rem;background:var(--color-brand-red,#c8102e);color:#fff;font-weight:600}
+/* F2 hamburger is 38x38 (<48) index.html header button.p-2 */
+header button[aria-label="Toggle menu"]{min-width:48px;min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+/* F3 High: hero buttons below first screen at 320/SE/375/iPhone 13/landscape (index.html hero: pt-24, h1 mt-6, p mt-8, buttons mt-10) */
+@media (max-width:639px),(max-height:500px) and (orientation:landscape){
+ .ttm-hero-container{padding-top:2rem!important;padding-bottom:3.5rem!important}
+ .ttm-hero-copy h1{margin-top:1rem!important;font-size:2.5rem!important}
+ .ttm-hero-copy p.mt-8{margin-top:1rem!important;font-size:1.0625rem!important;line-height:1.55!important}
+ .ttm-hero-copy .mt-10{margin-top:1.25rem!important}
+ .ttm-hero-grid{gap:2rem!important}}
+@media (max-height:500px) and (orientation:landscape){.ttm-hero-container{padding-top:1rem!important}.ttm-hero-copy h1{font-size:1.875rem!important;margin-top:.5rem!important}.ttm-hero-copy p.mt-8{margin-top:.75rem!important}.ttm-hero-copy .mt-10{margin-top:1rem!important}.ttm-hero-copy h1 br{display:none}}
+/* F4 Medium: footer email link overflows at 768 (r=784) -> sideways scroll; footer grid cell min-width */
+footer a[href^="mailto:"]{overflow-wrap:anywhere;word-break:break-word}
+footer .grid>*{min-width:0}
+/* F6 Medium: footer links 18px tall, hero-adjacent CTAs 36-40px, slider arrows 44px, slide dot 6px (<48) */
+footer ul a{display:inline-flex;align-items:center;min-height:48px}
+footer ul.space-y-2>:not([hidden])~:not([hidden]){margin-top:0}
+button[aria-label=Previous],button[aria-label=Next]{width:48px!important;height:48px!important}
+button[aria-label^="Go to slide"]{position:relative}button[aria-label^="Go to slide"]::after{content:"";position:absolute;inset:-21px -8px}
+a.mt-6.inline-flex.items-center,header a.sm\:inline-flex{min-height:48px}
+/* F7 Medium: 12-14px text (eyebrows, footer, card meta, section intros) below 16px body minimum */
+@media (max-width:1023px){p.eyebrow{font-size:.875rem!important}.text-sm{font-size:1rem!important;line-height:1.5rem!important}}
+/* F6 cont. inline text links and logo link */
+header a[href="/"].flex,a.text-brand-blue.font-semibold,a.text-white.font-semibold.border-b{display:inline-flex;align-items:center;min-height:48px}
+footer ul a{min-width:48px}
+@media (max-width:1023px){div.max-w-7xl>p{font-size:1rem!important}p.eyebrow{font-size:1rem!important}}
+/* F9 Low: Mike rule, work slider card captions left-aligned */
+.work-slider-card .p-6{text-align:center}

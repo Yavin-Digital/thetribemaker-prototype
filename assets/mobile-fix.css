@@ -36,3 +36,11 @@ footer ul a{min-width:48px}
 
 /* F10 Low: desktop nav + footer text 14px -> 16px */
 header nav a.text-sm,footer .text-sm,footer .text-xs{font-size:1rem!important;line-height:1.5rem!important}
+
+/* R3-1 Low: desktop nav "Monthly Plans" wraps to 2 rows at 1024 (Chromium) after the 16px bump; R3-2 Low: header CTA 14px at >=1024 */
+header nav a{white-space:nowrap}
+@media (min-width:1024px) and (max-width:1279px){header nav{gap:1.125rem!important}}
+header a.sm\:inline-flex{font-size:1rem!important;line-height:1.5rem!important}
+/* R3-3 Low (desktop >=1024): eyebrow 12px, card meta / section intro 14px, nav links 24px tall */
+p.eyebrow,p.mt-1.text-sm,p.mt-3.text-sm{font-size:1rem!important;line-height:1.5rem!important}
+header nav a{display:inline-flex;align-items:center;min-height:48px}

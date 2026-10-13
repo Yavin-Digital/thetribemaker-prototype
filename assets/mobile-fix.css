@@ -30,3 +30,9 @@ footer ul a{min-width:48px}
 @media (max-width:1023px){div.max-w-7xl>p{font-size:1rem!important}p.eyebrow{font-size:1rem!important}}
 /* F9 Low: Mike rule, work slider card captions left-aligned */
 .work-slider-card .p-6{text-align:center}
+
+/* R2-1 Medium: second hero button cut at 320/SE (bottom 584/568) after F7 eyebrow bump; tighten hero spacing */
+@media (max-width:639px){.ttm-hero-container{padding-top:1.25rem!important}.ttm-hero-copy h1{margin-top:.75rem!important}.ttm-hero-copy .mt-10{margin-top:1rem!important}}
+
+/* F10 Low: desktop nav + footer text 14px -> 16px */
+header nav a.text-sm,footer .text-sm,footer .text-xs{font-size:1rem!important;line-height:1.5rem!important}
